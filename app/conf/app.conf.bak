@@ -187,20 +187,18 @@ do_menu_bar_caching = 0
 # If you're not using certain editors in your system (you don't catalogue places for example)
 # you can disable the menu items for them by setting the various *_disable directives below to a non-zero value
 #
-# <customized fotoCH>
 ca_objects_disable = 0
 ca_entities_disable = 0
 ca_places_disable = 0
 ca_occurrences_disable = 0
 ca_collections_disable = 0
-ca_object_lots_disable = 1
-ca_storage_locations_disable = 1
-ca_loans_disable = 1
+ca_object_lots_disable = 0
+ca_storage_locations_disable = 0
+ca_loans_disable = 0
 ca_movements_disable = 1
 ca_tours_disable = 1
 ca_tour_stops_disable = 1
 ca_object_representations_disable = 1
-# </customized fotoCH>
 
 
 # -----------------------------------
@@ -872,9 +870,7 @@ default_bundle_access_level = __CA_BUNDLE_ACCESS_EDIT__
 # -----------------------------------
 # Type-level access control
 # -----------------------------------
-# <customized fotoCH>
-perform_type_access_checking = 1
-# </customized fotoCH>
+perform_type_access_checking = 0
 default_type_access_level = __CA_BUNDLE_ACCESS_EDIT__
 
 # -----------------------------------
