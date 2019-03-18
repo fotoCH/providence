@@ -66,7 +66,7 @@ class Zend_Db_Adapter_Db2 extends Zend_Db_Adapter_Abstract
         'dbname'       => null,
         'username'     => null,
         'password'     => null,
-        'host'         => 'localhost',
+        'host'         => 'db',
         'port'         => '50000',
         'protocol'     => 'TCPIP',
         'persistent'   => false,
@@ -162,8 +162,8 @@ class Zend_Db_Adapter_Db2 extends Zend_Db_Adapter_Abstract
             }
         }
 
-        if ($this->_config['host'] !== 'localhost' && !$this->_isI5) {
-            // if the host isn't localhost, use extended connection params
+        if ($this->_config['host'] !== 'db' && !$this->_isI5) {
+            // if the host isn't db, use extended connection params
             $dbname = 'DRIVER={IBM DB2 ODBC DRIVER}' .
                      ';DATABASE=' . $this->_config['dbname'] .
                      ';HOSTNAME=' . $this->_config['host'] .
@@ -178,7 +178,7 @@ class Zend_Db_Adapter_Db2 extends Zend_Db_Adapter_Abstract
                 $this->_config['driver_options']
             );
         } else {
-            // host is localhost, so use standard connection params
+            // host is db, so use standard connection params
             $this->_connection = $conn_func_name(
                 $this->_config['dbname'],
                 $this->_config['username'],
